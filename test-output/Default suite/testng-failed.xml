@@ -7,7 +7,6 @@
         <methods>
           <include name="beforeSuite"/>
           <include name="afterTest"/>
-          <include name="createCampaignWithExpectedCloseDateTest"/>
           <include name="afterClass"/>
           <include name="afterMethod"/>
           <include name="BeforeTest"/>

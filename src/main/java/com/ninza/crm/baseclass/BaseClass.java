@@ -1,9 +1,12 @@
 package com.ninza.crm.baseclass;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
@@ -20,6 +23,8 @@ import com.ninza.crm.generic.webdriverutility.JavaUtility;
 import com.ninza.crm.generic.webdriverutility.WebDriverUtility;
 import com.ninza.crm.objectrepository.HomePage;
 import com.ninza.crm.objectrepository.LoginPage;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
   
@@ -53,8 +58,14 @@ public class BaseClass {
 		System.out.println("Launch the browser");
 		String BROWSER = pf.toGetDataFromPropertiesFile("browser");
 
-//		WebDriverManager.chromedriver().setup();
+		ChromeOptions settings = new ChromeOptions();		
+		Map<String, Object> prefs = new HashMap<>(); 
+		prefs.put("profile.password_manager_leak_detection", false); 
+		settings.setExperimentalOption("prefs", prefs);	
+		
+//	    WebDriverManager.chromedriver().setup();
 //		WebDriverManager.edgedriver().setup();
+		
 		if (BROWSER.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
 		} else if (BROWSER.equalsIgnoreCase("chrome")) {
@@ -70,11 +81,6 @@ public class BaseClass {
 		System.out.println("Close the browser");
 		driver.quit();
 	}
-
-//	@org.testng.annotations.BeforeTest(groups = {"Smoke","Regression"})
-//	public void BeforeTest() {
-//		System.out.println("Pre-codiotions for parallel executions");
-//	}
 	
 	@BeforeMethod(groups = {"Smoke","Regression"})
 	public void BeforeTest() {
