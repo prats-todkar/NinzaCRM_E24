@@ -8,9 +8,10 @@
           <include name="beforeSuite"/>
           <include name="afterTest"/>
           <include name="afterClass"/>
+          <include name="createCampaignWithExpectedCloseDateTest"/>
           <include name="afterMethod"/>
-          <include name="BeforeTest"/>
           <include name="afterSuite"/>
+          <include name="BeforeTest"/>
           <include name="createCamapignWithMandataoryFieldsTest"/>
           <include name="beforeClass"/>
           <include name="beforeMethod"/>
