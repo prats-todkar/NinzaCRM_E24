@@ -71,7 +71,7 @@ public class CreateCampaignTest extends BaseClass{
 		ccp.getTargetSizeTF().sendKeys(targetSize);
 
 		// Get the date after 30 days
-		String expectedDate = ju.togetRequiredDate(30);
+		String expectedDate = ju.togetRequiredDate(20);
 		ccp.getExpectedCloseDateTF().sendKeys(expectedDate);
 		ccp.getCreateCampaignSubmitBtn().click();
 

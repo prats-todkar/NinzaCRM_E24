@@ -3,19 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ninza.crm.producttest.CreateProductTest">
+      <class name="com.ninza.crm.campaigntest.CreateCampaignTest">
         <methods>
           <include name="beforeSuite"/>
           <include name="afterTest"/>
           <include name="afterClass"/>
+          <include name="createCampaignWithExpectedCloseDateTest"/>
           <include name="afterMethod"/>
           <include name="afterSuite"/>
           <include name="BeforeTest"/>
-          <include name="createProductWithMandatoryFieldTest"/>
           <include name="beforeClass"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.ninza.crm.producttest.CreateProductTest -->
+      </class> <!-- com.ninza.crm.campaigntest.CreateCampaignTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
