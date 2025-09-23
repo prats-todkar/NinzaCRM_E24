@@ -24,8 +24,6 @@ import com.ninza.crm.generic.webdriverutility.WebDriverUtility;
 import com.ninza.crm.objectrepository.HomePage;
 import com.ninza.crm.objectrepository.LoginPage;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class BaseClass {
   
 	public WebDriver driver = null;
